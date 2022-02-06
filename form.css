@@ -1,0 +1,113 @@
+#container {
+  
+  height: 100vh; /*full screen*/
+  background-color: rgb(246, 230, 184);
+  padding-top: 30px;
+  padding-left: 30px;
+  
+}
+
+#clear {
+  
+  padding: 10px;
+  color: orange;
+
+  border-radius: 10%;
+  border-color: rgb(255, 166, 0);
+  background-color: rgba(255, 166, 0, 0.178);
+  margin-bottom: 10px;
+
+
+}
+
+
+#itemsContainer {
+  margin-top:1px;
+  border: 1px dashed orange;
+  height: 250px;
+  margin-left: -1px;
+
+}
+ 
+
+div > p {
+  
+  margin-left: 20px;
+  padding: 1px;
+ 
+  
+
+}
+
+#name {
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color: rgb(246, 230, 184);
+    margin-left: 5px;
+}
+
+#cellPhone {
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color: rgb(246, 230, 184);
+    margin-left: 5px;
+}
+
+#email {
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color: rgb(246, 230, 184);
+    margin-left: 5px;
+}
+
+#password {
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color: rgb(246, 230, 184);
+    margin-left: 5px;
+}
+
+
+#submit {
+  margin-left: 200px;
+  padding: 10px;
+  color: orange;
+  margin-bottom: 10px;
+
+  border-radius: 10%;
+  border-color: rgb(255, 166, 0);
+  background-color: rgba(255, 166, 0, 0.178);
+  
+  
+}
+
+p{
+  /*pra o submit n descer quando aparece a frase*/
+  height: 10px; 
+
+}
+
+#invalidAge {
+    color: red;
+}
+
+#cinema {
+  margin-left: 15px;
+}
+
+#dance {
+  margin-left: 15px;
+}
+
+#photography {
+  margin-left: 15px;
+}
+
+
+#demo {
+  width: 30px;
+  margin: 10px;
+}
+
+
+

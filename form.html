@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="./form.css" rel="stylesheet">
+
+  <!--
+    Name
+Cell Phone: comeca com +351 e 91/92/93/96 + 7 digitos
+Sexo
+Email: tem de ter o @
+Password: tem de ter 1 letra e 1 numero
+Hobbies: ter 1 selecionado por default
+Age: 18 - 130
+Botão submit
+
+(JÁ)
++++
+2nda parte
+
+Name: so aceita letras
+Email: terminar com o padrao dos emails (ex: @gmail.com / @hotmail.com)
+Password: 1 letra minuscula, 1 letra maiuscula, 1 numero, 1 caracter especial. Minimo 6 (já)
+Age: 0 - 130 mas so aceitar maior de 18 anos. (apresenta um erro) (já)
+Botao de submit: ao clicar guardar a informacao e apagar o form (já)
+Botão clear: apaga o form e a informacao (já)
+Ser possivel preencher o form varias vezes e guardar a informacao ate clicar clear
+
+Adicionar estilo de erro em que aparece o texto por baixo do input com erro e o mesmo fica vermelho
+local storage - localStorage.name na console do chrome (já)
+
+-->
+</head>
+
+<body>
+
+    <div id="container">
+        <form id="form" onsubmit="saveData()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required><br><br>
+
+            <label for="cellPhone">Cell Phone:</label> 
+            <input type="tel" id="cellPhone" name="cellPhone" value="+351" pattern="^(\+351)(91|92|93|96)[0-9]{7}" required><br><br>
+
+            <label for="gender">Sex:</label>
+            <input type="radio" id="feminino" name="gender" value="Feminino" required>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="masculino" name="gender" value="Masculino">
+            <label for="masculino">Masculino</label> <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[\w]+@(hotmail.com|gmail.com)$" placeholder="only hotmail and gmail" required> <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$€!%*?&]{6,}$" title="At least 1 letter and one number" required> <br><br>
+
+            <label for="hobbies">Hobbies:</label>
+
+            <input type ="checkbox" id="music" name="hobbies" value="music" checked = "checked" required>
+            <label for="music">Music</label>
+            <input type ="checkbox" id="cinema" name="hobbies" value="cinema">
+            <label for="cinema">Cinema</label>
+            <input type ="checkbox" id="dance" name="hobbies" value="dance">
+            <label for="dance">Dance</label>
+            <input type ="checkbox" id="photography" name="hobbies" value="photography" disabled>
+            <label for="photography">Photography</label> <br><br>
+
+            <label for="age">Age:</label> <output id="demo">0</output>
+            <input type="range" id="ageRange" name="age" min="0" max="130" value="0" oninput="this.previousElementSibling.value = this.value">
+            <p id="invalidAge"></p> 
+            <br><br>
+
+            <input type="submit" value="Submit" id="submit">
+            <input type="reset" value="Clear" id="clear" onclick="deleteData()">
+
+        </form>
+
+        <div id="itemsContainer">
+           
+        </div>
+
+    </div>
+
+    <script src="./form.js"></script>
+   
+
+</body>
+</html>
